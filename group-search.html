@@ -32,80 +32,168 @@
 			</div>
 		</div>
 	</header>
-    <div class="wrapper">
-    	<div class="dialogue flex">
-   			<div class="dialogue__messages">
-   				<div class="dialogue__caption flex">Закрыть сообщения</div>
-   				<div class="dialogue__content">
-				<div class="person-small flex">
-					<div class="person-small__photo"></div>
-					<div class="person-small__info">
-						<div class="flex">
-							<div class="person-small__name">Василий Петров<span>#1</span></div>
-							<div class="person-small__search"></div>
-							<div class="person-small__close"></div>
-						</div>
-						<div class="person-small__city">Москва</div>
+	<div class="search-line">
+		<div class="wrapper">
+			<div class="account-nav">
+				<a href="https://" class="account-nav__link">Профиль</a>
+			</div>	
+			<form action="/" class="account-search flex"> 
+				<input type="submit" class="account-search__button" value="">
+				<input type="search" class="account-search__field" placeholder="Найти участника или группу" value="" name=""> 
+			</form>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="search-tabs">
+			<div class="search-tabs__caption">Включить в поиск</div>
+			<div class="search-tabs__inner flex">
+				<div class="search-tabs__button">Пользователи</div>
+				<div class="search-tabs__button active">Группы</div>
+				<div class="search-tabs__button">Города</div>
+				<div class="search-tabs__button">Описание</div>
+			</div>
+		</div>	
+		<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
 					</div>
-				</div>
-				<div class="messsage-columns">		
-					<div class="messsage-columns__message message">
-						<div class="message__author">Виталий Аркашев<span>12:30</span></div>
-						<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
-					</div>	
-					<div class="messsage-columns__message messsage-columns__message_my message">
-						<div class="flex">
-							<div class="message__author">Я, <span>12:30</span></div>
-							<div class="message-edit"></div>
-							<div class="message-delete"></div>
-						</div>
-						<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
 					</div>
-					<div class="messsage-columns__message  message">
-						<div class="message__author">Виталий Аркашев<span>12:30</span></div>
-						<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
-					</div>
-					<div class="messsage-columns__message messsage-columns__message_my message">
-						<div class="flex">
-							<div class="message__author">Я, <span>12:30</span></div>
-							<div class="message-edit"></div>
-							<div class="message-delete"></div>
-						</div>
-						<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
-					</div>
-					<div class="messsage-columns__message message">
-						<div class="message__author">Виталий Аркашев,<span>12:30</span></div>
-						<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
-					</div>
-				</div>
-				<div class="my-message flex">
-					<textarea class="my-message__textarea" name="" id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</textarea>
-					<button class="my-message__button"></button>
-				</div>
 				</div>
 			</div>
-			<div class="dialogue__persons">
-				<div class="dialogue__caption flex">
-					Диалоги
-				</div>
-				<ul>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас<span>2 новых</span></li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-					<li>Арсений Покрас</li>
-				</ul>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
 			</div>
 		</div>
-  	</div>			
+	<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
+					</div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
+			</div>
+		</div>
+	<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
+					</div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
+			</div>
+		</div>
+	<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
+					</div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
+			</div>
+		</div>
+	<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
+					</div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
+			</div>
+		</div>
+	<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
+					</div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
+			</div>
+		</div>
+	<div class="group-item flex">
+			<div class="person">
+				<div class="person__name">Самоварные Мастера<span>#1</span></div>
+				<div class="person__city">Москва</div>	
+				<div class="figures flex">
+					<div class="figures__item">
+						<div class="figures__figure">14</div>
+						<div class="figures__text">Инициатив в работе</div>
+					</div>
+					<div class="figures__item">
+						<div class="figures__figure">25</div>
+						<div class="figures__text">Человек участвует</div>
+					</div>
+				</div>
+			</div>
+			<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum s</div>
+			<div class="account-buttons">
+				<a href="#" class="account-buttons__button button button_big button_green">Подписаться</a>
+			</div>
+		</div>
+	</div>
     <footer class="footer">
     	<div class="footer__mobile">
     		<div class="wrapper">

@@ -59,6 +59,12 @@ body {
 	flex-wrap: wrap;
 }
 
+.flex_between {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
 .button {
 	display: inline-block;
     box-sizing: border-box;
@@ -942,17 +948,13 @@ footer .small-logo {
 	padding: 16px;
 }
 
-.dialogue__caption-left {
-	flex: 1;
+.dialogue__content {
+	padding: 0 10px;
 }
 
-.dialogue__caption-right {
-	width: 260px;
-}
 
 .dialogue__persons {
-	width: 305px;
-	
+	width: 305px;	
 }
 
 .dialogue__persons ul {
@@ -991,7 +993,6 @@ footer .small-logo {
 
 .dialogue__messages {
 	flex: 1;
-	padding: 0 10px;
 }
 
 .person-small {
@@ -1032,13 +1033,22 @@ footer .small-logo {
 	margin-left: 10px;
 }
 
+.person-small__search {
+	background: url(/css/img/message-icons.png) no-repeat -9px -9px;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px 0 10px;
+}
+.person-small__close {
+	background: url(/css/img/message-icons.png) no-repeat -46px -8px;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
 .person-small__city{
 	font: 400 12px "Montserrat";
 	color: rgb(151, 151, 151);
-}
-
-.messsage-columns {
-    padding: 0 20px;
 }
 
 .messsage-columns__message {
@@ -1048,6 +1058,106 @@ footer .small-logo {
 
 .messsage-columns__message_my {
     margin: 15px 0 15px auto;
+}
+
+.message-edit {
+	background: url("/css/img/message-icons.png") no-repeat -9px -47px;
+	width: 16px;
+	height: 15px;
+	margin: 0 2px 0 5px;
+}
+.message-delete {
+	background: url("/css/img/message-icons.png") no-repeat -43px -47px;
+	width: 16px;
+	height: 15px;
+	margin: 0 2px;
+}
+
+/*search*/
+
+.search-line {
+	box-sizing: border-box;
+	background: #fcfcfc;
+	padding: 30px 0 20px;
+}
+
+.search-line .account-nav {
+	margin: 0;
+}
+
+.account-search {
+	align-items: center;
+	justify-content: center;
+	margin-top: -30px;
+}
+
+.account-search__button {
+    background: url(../css/img/search.png) no-repeat center;
+	border: none;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.account-search__field {
+    height: 40px;
+    width: 435px;
+    border: none;
+    padding-left: 15px;
+    font-size: 24px;
+    background: #fcfcfc;
+    color: rgb(106, 106, 106);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.search-tabs {
+	margin: 20px 0;
+}
+
+.search-tabs__caption {
+	font: 400 16px "Montserrat";
+	color: rgb(106, 106, 106);
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.search-tabs__inner {
+	justify-content: center;
+}
+
+.search-tabs__button {
+	background: #ebebeb;
+	font: 400 12px "Montserrat";
+	color: rgb(106, 106, 106);
+	text-align: center;
+	padding: 5px;
+}
+
+.search-tabs__button.active {
+	background: #52ac62;
+	color: rgb(255, 255, 255);
+}
+
+
+.group-item {
+	margin: 30px 0;
+}
+
+.first-row-person {
+	width: 100%;
+}
+
+.first-row-buttons {
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.person-wr {
+	margin: 50px 0;
 }
 
 
@@ -1173,7 +1283,38 @@ footer .small-logo {
 		padding: 20px 0;
 	}
 	
-		
+	.dialogue {
+		flex-direction: column;
+	}
+	
+	.dialogue__persons {
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	
+	.search-line {
+		padding: 20px 0;
+	}
+	
+	.search-line .account-nav {
+		display: none;
+	}
+	
+	.account-search {
+		margin: 0;
+	}
+	
+	.group-item {
+		flex-direction: column;
+	}
+	
+	.group-item  .account-buttons {
+		display: block;
+	}
+	
+	.person_search .button {
+		display: none;
+	}	
 }
 
 @media screen and (max-width: 767px) {
@@ -1284,6 +1425,21 @@ footer .small-logo {
 	
 	.messsage-columns__message {
 		width: 70%;
+	}
+	
+	.my-message__textarea {
+		width: auto;
+	}
+	
+	.account-search__field {
+		height: 40px;
+		width: 300px;
+		font-size: 16px;
+	}
+	
+	.account-search__button {
+		width: 40px;
+		height: 40px;
 	}
 
 }
