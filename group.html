@@ -9,7 +9,7 @@
     <script src="https://myfri.org/wp-content/themes/my_fri/js/main.js?ver=5.1.1"></script>
     <title></title>
 </head>
-<body class="account-page">
+<body class="account-page group-page">
 	<header>
 		<div class="wrapper flex">
 			<div class="flex">
@@ -39,80 +39,33 @@
     			<a href="https://" class="account-nav__link account-nav__link_last">Участники и группы</a>
 			</div>	
     		<div class="account-screen__top-content flex">
-				<div class="person flex">
-					<div class="person__photo"></div>
-					<div class="person__info">
-						<div class="person__name">Василий Петров<span>#1</span></div>
-						<div class="person__city">Москва</div>
-						<div class="figures flex">
-							<div class="figures__item">
-								<div class="figures__figure">14</div>
-								<div class="figures__text">Инициатив отслеживает</div>
-							</div>
-							<div class="figures__item">
-								<div class="figures__figure">2</div>
-								<div class="figures__text">Инициативы начато</div>
-							</div>
-							<div class="figures__item">
-								<div class="figures__figure">17</div>
-								<div class="figures__text">Участий в проектах</div>
-							</div>
+				<div class="person">
+					<div class="person__name">Самоварные Мастера<span>#1</span></div>
+					<div class="person__city">Москва</div>	
+					<div class="figures flex">
+						<div class="figures__item">
+							<div class="figures__figure">14</div>
+							<div class="figures__text">Инициатив в работе</div>
 						</div>
-						<div class="person__buttons flex">
-							<a href="#" class="person__button button button_big button_bordered">Написать сообщение</a>
-							<a href="#" class="person__button button button_medium button_green">Подписаться</a>
+						<div class="figures__item">
+							<div class="figures__figure">25</div>
+							<div class="figures__text">Человек участвует</div>
 						</div>
 					</div>
+					<div class="person__buttons flex">
+						<a href="#" class="person__button button button_big">Редактировать Группу</a>
+						<a href="#" class="person__button button button_medium button_grey">Отписаться</a>
+					</div>
 				</div>
-				<div class="account-buttons_mobile flex">
-					<a href="#" class="person__button button button_big button_bordered">Написать сообщение</a>
-					<a href="#" class="person__button button button_medium button_green">Подписаться</a>
-					<a href="#" class="person__button_mobile button button_big button_grey">Предложить инициативу</a>
-				</div>
+				<div class="group-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
 				<div class="account-buttons">
-					<a href="#" class="account-buttons__button button button_big">Создать инициативу</a>
+					<a href="#" class="account-buttons__button button button_big button_green">Создать инициативу</a>
 					<a href="#" class="account-buttons__button button button_big button_grey">Предложить инициативу</a>
 				</div>
 			</div>
-   		<div class="accordion">
-   				<div class="accordion__question">Подробная информация</div>
-			<div class="accordion__answer flex">
-				<div class="person-details">
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">Имя, Фамилия :</div>
-						<div class="person-details__second-column"><b>Василий Петров</b></div>
-					</div>
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">Участник номер :</div>
-						<div class="person-details__second-column"><b>1</b></div>
-					</div>
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">Возраст :</div>
-						<div class="person-details__second-column"><b>20 лет</b></div>
-					</div>
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">Город :</div>
-						<div class="person-details__second-column"><b>Санкт-Петербург</b></div>
-					</div>
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">Работа :</div>
-						<div class="person-details__second-column">Тракторист</div>
-					</div>
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">Номер телефона :</div>
-						<div class="person-details__second-column"><b>+79998005876</b></div>
-					</div>
-					<div class="person-details__row flex">
-						<div class="person-details__first-column">О себе :</div>
-						<div class="person-details__second-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
-					</div>
-				</div>
-				<div class="accordion__close">Закрыть</div>
-			</div>
-    		</div>
     		<div class="account-screen__columns flex">
     			<div class="account-screen__column">
-    				<div class="account-screen__caption">Отслеживаемые Инициативы</div>
+    				<div class="account-screen__caption">Над чем работает группа</div>
     				<div class="initiative-item flex">
     					<div class="initiative-item__photo">
     						<img src="/css/img/example.png" alt="">
@@ -186,60 +139,93 @@
     				<a href="#" class="account-screen__all-initiative">Показать все инициативы</a>
     			</div>
     			<div class="account-screen__column">
-    				<div class="account-screen__caption">Мои Инициативы</div>
-    				<div class="initiative-item flex">
-    					<div class="initiative-item__photo">
+    				<div class="account-screen__caption">Живой чат</div>
+    				<div class="message">
+    					<div class="message__author">Виталий Аркашев<span>12:30</span></div>
+    					<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+    				</div>
+    				<div class="message">
+    					<div class="message__author">Виталий Аркашев<span>12:30</span></div>
+    					<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+    				</div>
+    				<div class="message">
+    					<div class="message__author">Виталий Аркашев<span>12:30</span></div>
+    					<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+    				</div>
+    				<div class="message">
+    					<div class="message__author">Виталий Аркашев<span>12:30</span></div>
+    					<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+    				</div>
+    				<div class="message">
+    					<div class="message__author">Виталий Аркашев<span>12:30</span></div>
+    					<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+    				</div>
+    				<div class="message">
+    					<div class="message__author">Виталий Аркашев<span>12:30</span></div>
+    					<div class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+    				</div>
+    				<div class="my-message flex">
+    					<textarea class="my-message__textarea" name="" id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</textarea>
+    					<button class="my-message__button"></button>
+    				</div>
+    				
+    				<div class="account-screen__caption account-screen__caption_members">Участники</div>
+    				<div class="members flex">
+    					<div class="members__item">
     						<img src="/css/img/example.png" alt="">
-    						<div class="initiative-item__quantity">142</div>
     					</div>
-    					<div class="initiative-item__info">
-    						<div class="initiative-item__caption">Новая диаспора</div>
-    						<div class="initiative-item__description">Представителям России за рубежом зачастую приходится опровергать мифы, отшучиваться, отражать нападки, ломать барьеры недоверия. Они вынужденно становятся адвокатами России, народными дипломатами, защитниками. Или выбирают полную ассимиляцию, по кусочкам отрезая себя от родины. В последнем случае Россия лишается своих граждан, а люди – корней. Их дети и внуки будут жить с пустотой там, где могла быть целая история: семьи, фамилии, родины.</div>
-    						<div class="initiative-item__buttons flex">
-    							<a href="#" class="initiative-item__button button button_small">Открыть</a>
-    							<div class="initiative-item__cancel">Отписаться от Инициативы....</div>
-    						</div>
-    					</div>
-    				</div>
-    				<div class="initiative-item flex">
-    					<div class="initiative-item__photo">
+    					<div class="members__item">
     						<img src="/css/img/example.png" alt="">
-    						<div class="initiative-item__quantity">142</div>
     					</div>
-    					<div class="initiative-item__info">
-    						<div class="initiative-item__caption">Новая диаспора</div>
-    						<div class="initiative-item__description">Представителям России за рубежом зачастую приходится опровергать мифы, отшучиваться, отражать нападки, ломать барьеры недоверия. Они вынужденно становятся адвокатами России, народными дипломатами, защитниками. Или выбирают полную ассимиляцию, по кусочкам отрезая себя от родины. В последнем случае Россия лишается своих граждан, а люди – корней. Их дети и внуки будут жить с пустотой там, где могла быть целая история: семьи, фамилии, родины.</div>
-    						<div class="initiative-item__buttons flex">
-    							<a href="#" class="initiative-item__button button button_small">Открыть</a>
-    							<div class="initiative-item__cancel">Отписаться от Инициативы....</div>
-    						</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+    					<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+						<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+						<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
+    					</div>
+						<div class="members__item">
+    						<img src="/css/img/example.png" alt="">
     					</div>
     				</div>
-    				<a href="#" class="account-screen__all-initiative">Показать все инициативы</a>
-    				<div class="account-screen__caption">Рабочие группы по продвижению Инициатив</div>
-    				<div class="initiative-item">
-    					<div class="flex">
-							<div class="initiative-item__caption">Новая диаспора</div>
-							<div class="initiative-item__date">27.11.2034</div>
-    					</div>
-    					<div class="initiative-item__members">245 участников</div>	
-						<div class="initiative-item__buttons flex">
-							<a href="#" class="initiative-item__button button button_small">Открыть</a>
-							<a href="#" class="initiative-item__button button button_small button_red">Выйти</a>
-						</div>
-    				</div>
-    				<div class="initiative-item">
-    					<div class="flex">
-							<div class="initiative-item__caption">Новая диаспора</div>
-							<div class="initiative-item__date">27.11.2034</div>
-    					</div>
-    					<div class="initiative-item__members">245 участников</div>	
-						<div class="initiative-item__buttons flex">
-							<a href="#" class="initiative-item__button button button_small">Открыть</a>
-							<a href="#" class="initiative-item__button button button_small button_red">Выйти</a>
-						</div>
-    				</div>
-    				<a href="#" class="account-screen__all-initiative">Показать все инициативы</a>
     			</div>
     		</div>
     	</div>

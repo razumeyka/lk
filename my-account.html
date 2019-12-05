@@ -58,58 +58,56 @@
 								<div class="figures__text">Участий в проектах</div>
 							</div>
 						</div>
-						<div class="person__buttons flex">
-							<a href="#" class="person__button button button_big button_bordered">Написать сообщение</a>
-							<a href="#" class="person__button button button_medium button_green">Подписаться</a>
-						</div>
 					</div>
 				</div>
 				<div class="account-buttons_mobile flex">
-					<a href="#" class="person__button button button_big button_bordered">Написать сообщение</a>
-					<a href="#" class="person__button button button_medium button_green">Подписаться</a>
-					<a href="#" class="person__button_mobile button button_big button_grey">Предложить инициативу</a>
+					<a href="#" class="account-buttons__button button button_big">Создать инициативу</a>
+					<a href="#" class="account-buttons__button button button_big button_grey">Предложить инициативу</a>
 				</div>
 				<div class="account-buttons">
 					<a href="#" class="account-buttons__button button button_big">Создать инициативу</a>
 					<a href="#" class="account-buttons__button button button_big button_grey">Предложить инициативу</a>
 				</div>
 			</div>
-   		<div class="accordion">
-   				<div class="accordion__question">Подробная информация</div>
+   		<form action="" class="accordion"> 
+			<div class="accordion__question">
+				<div class="button button_big button_edit">Редактировать</div>
+				<button class="button button_big button_save">Сохранить</button>
+			</div>
 			<div class="accordion__answer flex">
 				<div class="person-details">
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">Имя, Фамилия :</div>
-						<div class="person-details__second-column"><b>Василий Петров</b></div>
+						<input class="person-details__second-column" type="text" value="Василий Петров">
 					</div>
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">Участник номер :</div>
-						<div class="person-details__second-column"><b>1</b></div>
+						<input class="person-details__second-column" type="text" value="1">
 					</div>
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">Возраст :</div>
-						<div class="person-details__second-column"><b>20 лет</b></div>
+						<input class="person-details__second-column" type="text" value="20 лет">
 					</div>
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">Город :</div>
-						<div class="person-details__second-column"><b>Санкт-Петербург</b></div>
+						<input class="person-details__second-column" type="text" value="Санкт-Петербург">
 					</div>
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">Работа :</div>
-						<div class="person-details__second-column">Тракторист</div>
+						<input class="person-details__second-column" type="text" value="Тракторист">
 					</div>
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">Номер телефона :</div>
-						<div class="person-details__second-column"><b>+79998005876</b></div>
+						<input class="person-details__second-column" type="text" value="+79998005876">
 					</div>
 					<div class="person-details__row flex">
 						<div class="person-details__first-column">О себе :</div>
-						<div class="person-details__second-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </div>
+						<textarea name="" id="" cols="50" rows="30" class="person-details__second-column">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</textarea>
 					</div>
 				</div>
 				<div class="accordion__close">Закрыть</div>
 			</div>
-    		</div>
+    	</form>
     		<div class="account-screen__columns flex">
     			<div class="account-screen__column">
     				<div class="account-screen__caption">Отслеживаемые Инициативы</div>
