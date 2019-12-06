@@ -7,7 +7,11 @@ $(document).ready(function(){
 			height: $(window).height() - 52 + 'px'
 		});
 	}
-	setHeiHeight(); 
+	setHeiHeight();
+	
+	$(window).resize(function(e){
+		setHeiHeight();
+	});
 	
 	
 	

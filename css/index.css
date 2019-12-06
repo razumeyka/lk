@@ -7,6 +7,8 @@
 	font-style: normal;
 }
 
+* { transition: all 0.5s;}
+
 body {
     background: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +18,7 @@ body {
 }
 
 .wrapper {
-    max-width:1160px;
+    max-width:1170px;
     padding:0 40px;
     margin:0 auto;
 }
@@ -58,6 +60,10 @@ i:hover {
 	padding: 10px;
 }
 
+.button:hover {
+	background-color: rgb(38, 70, 138);
+}
+
 .button_big {
 	max-width: 210px;
 	font: 400 14px "Montserrat";
@@ -76,9 +82,14 @@ i:hover {
 	border: 2px solid rgb(49, 93, 185);
 }
 
+
 .button_green {
 	background-color: rgb(82, 172, 98);
 	border: none;
+}
+
+.button_green:hover {
+	background-color: rgb(71, 148, 84);
 }
 
 .button_grey {
@@ -86,9 +97,18 @@ i:hover {
 	border: none;
 }
 
+.button_grey:hover {
+	background-color: rgb(160, 160, 160);
+}
+
 .button_red {
 	background-color: rgb(198, 34, 41);
 }
+
+.button_red:hover {
+	background-color: #a72328;
+}
+
 
 .fa:before{
 	color: #111; 
@@ -394,14 +414,18 @@ i:hover {
 	align-items: center;
 }
 
-.account-nav__link:hover {
-	font-weight: 500;
-}
-
 .account-nav__link i {
     font-size: 10px;
     line-height: 1;
 	margin-right: 5px;
+}
+
+.account-nav__link:hover i {
+	font-weight: 500;
+}
+
+.account-nav__link:hover {
+	font-weight: 500;
 }
 
 .account-nav__link_last {
@@ -439,7 +463,7 @@ i:hover {
 .person__photo {
 	box-sizing: border-box;
 	border-radius: 50%;
-	background: url(../css/img/person.png) no-repeat center;
+	background: url(../css/img/person.png) no-repeat center, #315db9;
 	background-size: contain;
 	width: 150px;
 	height: 150px;
@@ -564,15 +588,24 @@ i:hover {
 	font: 400 14px "Montserrat";
 	color: rgb(112, 112, 112);
 	padding-left: 10px;
-	margin: 15px 0 5px;
+	margin-bottom: 7px;
 }
 
 .accordion .search-tabs__inner {
     justify-content: flex-start;
+	width: 250px;
 }
 
 .accordion .search-tabs__label {
-	
+	width: 50%;
+}
+
+.accordion .search-tabs__tab {
+    padding: 10px;
+    width: 100%;
+    display: block;
+	font: 500 16px "Montserrat";
+	color: rgb(255, 255, 255);
 }
 
 .person-details__first-column {
@@ -635,6 +668,8 @@ input.person-details__second-column:focus {
 }
 
 .initiative-item__photo img{
+	display: block;
+    background: #315cb9;
 	box-sizing: border-box;
 	border-radius: 50%;
 	width: 80px;
@@ -661,10 +696,17 @@ input.person-details__second-column:focus {
 }
 
 .initiative-item__caption {
+	display: block;
     font: 700 16px "Montserrat";
     color: rgb(24, 23, 23);
     margin-bottom: 5px;
 }
+
+.initiative-item__caption:hover {
+    color: #807e7e;
+}
+
+
 
 .initiative-item__description {
     font-size: 14px;
@@ -699,6 +741,10 @@ input.person-details__second-column:focus {
 	position: relative;
 }
 
+.account-screen__all-initiative:hover {
+    color: rgb(183, 183, 183);
+}
+
 .account-screen__all-initiative:before {
     content: "";
     border-radius: 50%;
@@ -731,9 +777,10 @@ input.person-details__second-column:focus {
 }
 
 .message__author {
-	font: 700 16px "Montserrat";
-	color: rgb(24, 23, 23);
-	margin-bottom: 5px;
+    display: block;
+    font: 700 16px "Montserrat";
+    color: rgb(24, 23, 23);
+    margin-bottom: 5px;
 }
 
 .message__author span {
@@ -767,11 +814,16 @@ input.person-details__second-column:focus {
     border: none;
     margin: 10px 10px 10px 15px;
     box-sizing: border-box;
+	cursor: pointer;
 }
 
 .my-message__button .fa-paper-plane:before {
 	color: #5eb26d;
 	font-size: 34px;
+}
+
+.my-message__button:hover .fa-paper-plane:before {
+	color: #4f8659;
 }
 
 .members {
@@ -784,10 +836,13 @@ input.person-details__second-column:focus {
 }
 
 .members__item img {
-  border-radius: 50%;
-  width: 33px;
-  height: 33px;
-	cursor: pointer;
+    display: block;
+    background: #315cb9;
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    margin: 0;
 }
 
 
@@ -801,6 +856,12 @@ input.person-details__second-column:focus {
 	height: auto;
 	margin: 0;
 	overflow: hidden;
+}
+
+.footer__wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0;
 }
 
 .footer__mobile {
@@ -1028,7 +1089,7 @@ footer .small-logo {
 }
 
 .dialogue__content {
-	padding: 0 10px;
+	padding: 0 20px;
 }
 
 
@@ -1075,7 +1136,6 @@ footer .small-logo {
 	top: 11px;
 	left: 0;
 }
-
 
 .dialogue__messages {
 	flex: 1;
@@ -1125,6 +1185,7 @@ footer .small-logo {
 
 .person-small i {
 	margin: 0 0 0 10px;
+	cursor: pointer;
 }
 
 .person-small__city{
@@ -1150,8 +1211,23 @@ footer .small-logo {
 	display: flex;
 }
 
+.messsage-columns__message i {
+	color: #979797;
+	cursor: pointer;
+}
+
+.messsage-columns__message i:hover {
+	color: #b7b7b7;
+}
+
+
+
 .messsage-columns__message i:first-child {
 	margin: 0 5px 0 10px;
+}
+
+.message__author:hover, .person-small__name:hover {
+	color: #9e9e9e;
 }
 
 
@@ -1164,7 +1240,10 @@ footer .small-logo {
 }
 
 .search-line .account-nav {
-	margin: 0;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 }
 
 .account-search {
@@ -1419,10 +1498,6 @@ footer .small-logo {
 		flex-direction: column;
 	}
 	
-	.form-screen {
-		padding: 15px 25px;
-	}
-	
 	.form-screen__caption {
 		margin-bottom: 10px;
 	}
@@ -1546,6 +1621,12 @@ footer .small-logo {
 	.account-nav {
 		margin-bottom: 25px;
 	}
+	
+	.dialogue {
+		box-shadow: none;
+		width: calc(100% + 30px);
+		margin-left: -15px;
+	}
 
 }
 
@@ -1616,8 +1697,32 @@ footer .small-logo {
 		margin: 0 5px;
 	}
 	
+	.footer__links-list {
+		margin: 0 -10px;
+	}
+	
 	.footer-links {
-		width: 100%;
+		padding: 10px;
+	}
+	
+	.form-screen {
+		max-width: 300px;
+		padding: 20px;
+	}
+	
+	.login-flex-row__sign-button {
+		font-size: 14px;
+		line-height: 29px;
+		margin-bottom: 0;
+	}
+	
+	.social__icon {
+		margin-right: 5px;
+	}
+	
+	.login-screen__or {
+		font-size: 12px;
+		margin: 0 15px 0 5px;
 	}
 	
 }
