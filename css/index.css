@@ -800,6 +800,7 @@ input.person-details__second-column:focus {
 	flex-wrap: nowrap;
 	height: auto;
 	margin: 0;
+	overflow: hidden;
 }
 
 .footer__mobile {
@@ -809,7 +810,6 @@ input.person-details__second-column:focus {
 	padding: 30px 15px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
 
 .footer__mobile__caption {
