@@ -1,37 +1,4 @@
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat-Regular.woff') format('woff'), url('fonts/Montserrat-Regular.ttf')  format('truetype'), url('fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-	font-family: 'Montserrat';
-	src: url('fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat-Medium.woff') format('woff'), url('fonts/Montserrat-Medium.ttf')  format('truetype'), url('fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat;
-  src: url('fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat-SemiBold.woff') format('woff'), url('fonts/Montserrat-SemiBold.ttf')  format('truetype'), url('fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat-Bold.woff') format('woff'), url('fonts/Montserrat-Bold.ttf')  format('truetype'), url('fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),  url('fonts/Montserrat-Black.woff') format('woff'), url('fonts/Montserrat-Black.ttf')  format('truetype'), url('fonts/Montserrat-Black.svg#Montserrat-Black') format('svg');
-  font-weight: 900;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap&subset=cyrillic');
 
 @font-face {
 	font-family: 'GothamPro';
@@ -52,6 +19,16 @@ body {
     max-width:1160px;
     padding:0 40px;
     margin:0 auto;
+}
+
+i {
+	font-family: fontawesome !important;
+	font-style: normal;
+	color: rgb(0,0,0);
+}
+
+i:hover {
+	color: #9e9e9e;
 }
 
 .flex {
@@ -111,6 +88,15 @@ body {
 
 .button_red {
 	background-color: rgb(198, 34, 41);
+}
+
+.fa:before{
+	color: #111; 
+	font-size:12px; 
+}
+
+.fa:hover:before{
+	color: rgb(162, 162, 162);
 }
 
 /* account-page header */ 
@@ -229,11 +215,11 @@ body {
     box-sizing: border-box;
     background: url(../css/img/login-bg.jpg) no-repeat center;
     background-size: cover;
-    padding: 145px 0 75px;
+	align-items: center;
 }
 
 .login-screen__caption {
-    font: 900 72px/1 "GothamPro";
+    font: 900 68px/1 "GothamPro";
     color: rgb(255, 255, 255);
     letter-spacing: 0.1px;
     margin: 0;
@@ -267,6 +253,11 @@ body {
 .login-flex-row__right-column {
     align-items: center;
     padding: 0 0 74px 12px;
+}
+
+.login-flex-row__right-column_login {
+    padding: 0px 0 0 12px;
+    margin: auto 0;
 }
 
 .login-screen__or {
@@ -396,21 +387,21 @@ body {
 }
 
 .account-nav__link {
-	font: 400 18px "Montserrat";
+	font: 400 16px "Montserrat";
 	color: rgb(24, 23, 23);
 	position: relative;
-	padding-left: 15px;
+	margin-right: 10px;
+	align-items: center;
 }
 
-.account-nav__link:first-child:before {
-	content: "";
-	background: url(/css/img/arrow.png) no-repeat center;
-	background-size: contain;
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	left: 0;
-	top: 5px;
+.account-nav__link:hover {
+	font-weight: 500;
+}
+
+.account-nav__link i {
+    font-size: 10px;
+    line-height: 1;
+	margin-right: 5px;
 }
 
 .account-nav__link_last {
@@ -430,15 +421,32 @@ body {
 .person {
 	flex-wrap: nowrap;
 	flex: 1;
+	position: relative;
+}
+
+.person_online:before {
+    content: "";
+    background-color: rgb(71, 200, 94);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 121px;
+    top: 11px;
+    z-index: 0;
 }
 
 .person__photo {
 	box-sizing: border-box;
 	border-radius: 50%;
-	background-color: rgb(49, 93, 185);
+	background: url(../css/img/person.png) no-repeat center;
+	background-size: contain;
 	width: 150px;
 	height: 150px;
+	position: relative;
+	z-index: 1;
 }
+
 
 .person__info {
     flex: 1;
@@ -457,7 +465,7 @@ body {
 }
 
 .person__city {
-    font: 400 16px "Montserrat";
+    font: 500 16px "Montserrat";
     color: rgb(151, 151, 151);
     margin-bottom: 12px;
 }
@@ -491,16 +499,17 @@ body {
 	padding-left: 15px;
 }
 
-.person__button.button_bordered:before {
-    content: "";
-    background: url(../css/img/foter-icons.png) no-repeat -103px -47px;
-    width: 18px;
-    height: 17px;
+.person__button.button_bordered .fa-paper-plane {
     position: absolute;
     right: 10px;
     top: 12px;
     z-index: 1;
 }
+
+.fa-paper-plane:before {
+    color: #ffffff;
+}
+
 
 .account-buttons_mobile {
 	display: none;
@@ -537,13 +546,33 @@ body {
 
 .accordion__answer {
 	justify-content: space-between;
-    padding: 21px 0 75px 0px;
+    padding: 21px 0 65px 0px;
 }
 
 .accordion__close {
-	font: 400 14px "Montserrat";
+	font: 500 14px "Montserrat";
 	color: rgb(82, 82, 82);
 	cursor: pointer;
+	text-align: right;
+}
+
+.accordion__close:hover {
+	font-weight: 600;
+}
+
+.accordion__close__caption {
+	font: 400 14px "Montserrat";
+	color: rgb(112, 112, 112);
+	padding-left: 10px;
+	margin: 15px 0 5px;
+}
+
+.accordion .search-tabs__inner {
+    justify-content: flex-start;
+}
+
+.accordion .search-tabs__label {
+	
 }
 
 .person-details__first-column {
@@ -580,9 +609,11 @@ input.person-details__second-column:focus {
 }
 
 .account-screen__column {
-	box-sizing: border-box;
-	width: 50%;
-	padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 20px;
 }
 
 .account-screen__caption {
@@ -596,7 +627,7 @@ input.person-details__second-column:focus {
 }
 
 .initiative-item__photo {
-    padding-top: 13px;
+	padding-top: 3px;
     width: 80px;
     display: flex;
     flex-direction: column;
@@ -608,26 +639,20 @@ input.person-details__second-column:focus {
 	border-radius: 50%;
 	width: 80px;
 	height: 80px;
+	margin: 0;
 }
 
 .initiative-item__quantity {
-    display: inline-block;
+    display: flex;
     font-size: 8px;
     color: rgb(139, 139, 139);
     text-align: center;
-    position: relative;
-    padding-left: 10px;
-    margin-top: 18px;
+    margin-top: 3px;
 }
 
-.initiative-item__quantity:before {
-	content: "";
-	background: url(../css/img/members.png) no-repeat center;
-	background-size: contain;
-	width: 10px;
-	height: 10px;
-	position: absolute;
-	left: 0;
+.initiative-item__quantity i {
+	margin-right: 3px;
+	font-size: 9px;
 }
 
 .initiative-item__info {
@@ -665,13 +690,26 @@ input.person-details__second-column:focus {
 }
 
 .account-screen__all-initiative {
-	display: block;
+	display: inline-block;
 	font: 400 14px "Montserrat";
 	color: rgb(112, 112, 112);;
 	text-align: center;
 	text-decoration: none;
-	margin: 25px 0;
+	margin: 25px auto;
+	position: relative;
 }
+
+.account-screen__all-initiative:before {
+    content: "";
+    border-radius: 50%;
+    background-color: rgb(60, 153, 210);
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    left: -2px;
+	bottom: 3px;
+}
+
 
 .initiative-item__date {
     font: 400 12px "Montserrat";
@@ -723,13 +761,17 @@ input.person-details__second-column:focus {
 }
 
 .my-message__button {
-    background: url(../css/img/mess.png) no-repeat center;
-    background-size: contain;
+	background: #ffffff;
     width: 34px;
     height: 34px;
     border: none;
     margin: 10px 10px 10px 15px;
     box-sizing: border-box;
+}
+
+.my-message__button .fa-paper-plane:before {
+	color: #5eb26d;
+	font-size: 34px;
 }
 
 .members {
@@ -751,12 +793,132 @@ input.person-details__second-column:focus {
 
 /*footer*/ 
 
+.footer, .footer_new {
+	background: #fafafa;
+	color: rgb(33, 33, 33);
+	position: relative;
+	flex-wrap: nowrap;
+	height: auto;
+	margin: 0;
+}
+
 .footer__mobile {
-    display: none;
+	box-sizing: border-box;
+	background: #3c99d2;
+	width: 270px;
+	padding: 30px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer__mobile__caption {
+	font: 600 17px "Montserrat";
+	color: rgb(255, 255, 255);
+	letter-spacing: 0.1px;
+	margin: 10px 0;
+}
+
+
+footer .small-logo {
+	margin-right: 10px;
+}
+
+.social-footer {
+	align-items: center;
+}
+
+.social-footer__icon {
+    display: block;
+    background: url(../css/img/foter-icons.png) no-repeat -6px -49px;
+    width: 32px;
+    height: 28px;
+    margin-right: 12px;
+}
+
+.social-footer__icon_youtube {
+    background-position:-9px -7px;
+}
+
+.social-footer__icon_insta {
+    background-position: -56px -8px;
+}
+
+.social-footer__icon_vk {
+    background-position: -102px -4px;
+}
+
+.wpcf7-form-control-wrap_footer {
+    margin: 0 0 10px;
+    box-shadow: none;
+	position: relative;
+}
+
+.wpcf7-form-control-wrap_footer:before {
+    content: "";
+    background: url(../css/img/foter-icons.png) no-repeat -59px -53px;
+    width: 18px;
+    height: 15px;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    z-index: 1;
+}
+
+.wpcf7-form-control-wrap_footer:first-child:before {
+    content: "";
+    background: url(../css/img/phone.png) no-repeat center;
+    width: 18px;
+    height: 15px;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    z-index: 1;
+}
+
+.wpcf7-form-control-wrap_footer .wpcf7-form-control {
+    border: 2px solid rgb(27, 69, 155);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: none;
+    height: 40px;
+    position: relative;
+    padding-left: 35px;
+}
+
+.wpcf7-form__submit-row_footer {
+	position: relative;
+}
+
+.wpcf7-submit_footer {
+    background: #315db9;
+    display: flex;
+    box-shadow: none;
+    border: navajowhite;
+    height: 41px;
+    width: 100%;
+    font: 400 14px "Montserrat";
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: relative;
+    padding: 0 15px;
+}
+
+.wpcf7-submit_footer i {
+	margin-left: 10px;
+}
+
+.footer__policy-text {
+	font: 400 10px "Montserrat";
+	color: rgb(255, 255, 255);
+	margin-top: 20px;
+	max-width: 170px;
+}
+
+.footer__right-column {
+	flex: 1;
 }
 
 .footer__top-line {
-    background: #fcfcfc;
     padding: 58px 0 35px;
 }
 
@@ -806,138 +968,51 @@ input.person-details__second-column:focus {
 }
 
 .footer__bottom-line {
-	background: #315db9;
+	background: #fafafa;
 	padding: 25px 0;
-	color: rgb(255, 255, 255);
+	position: relative;
+}
+
+.footer__bottom-line:before {
+	content: "";
+	background-color: rgb(60, 153, 210);
+	width: calc(100% - 30px);
+	height: 2px;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	top: 0;
 }
 
 .footer__bottom-line .wrapper {
 	flex-wrap: nowrap;
-	justify-content: space-between;
 	align-items: center;
+	margin: 0 -20px;
 }
 
-.footer__left-column {
-	max-width: 300px;
-}
-
-footer .small-logo {
-	margin-right: 10px;
-}
-
-/* social */
-
-.social-footer {
-	align-items: center;
-}
-
-.social-footer__icon {
-    display: block;
-    background: url(../css/img/foter-icons.png) no-repeat -6px -49px;
-    width: 32px;
-    height: 28px;
-    margin-right: 12px;
-}
-
-.social-footer__icon_youtube {
-    background-position:-9px -7px;
-}
-
-.social-footer__icon_insta {
-    background-position: -56px -8px;
-}
-
-.social-footer__icon_vk {
-    background-position: -102px -4px;
-}
-
-.footer__left-caption {
-    font: 700 18px "Montserrat";
-    font-weight: bold;
-    margin: 9px 0 5px;
+.footer__bottom-line .footer__left-column, .footer__bottom-line .footer__right-column {
+	box-sizing: border-box;
+	width: 50%;
+	padding: 0 20px;
 }
 
 .footer__copyright {
 	font: 400 14px "Montserrat";
 	line-height: 1.2;
-}
-
-.footer__form {
-    max-width: 305px;
-}
-
-.wpcf7-form-control-wrap_footer {
-    margin: 0 0 10px;
-    box-shadow: none;
-	position: relative;
-}
-
-.wpcf7-form-control-wrap_footer:before {
-    content: "";
-    background: url(../css/img/foter-icons.png) no-repeat -59px -53px;
-    width: 18px;
-    height: 15px;
-    position: absolute;
-    left: 10px;
-    top: 13px;
-    z-index: 1;
-}
-
-.wpcf7-form-control-wrap_footer .wpcf7-form-control {
-    border: 2px solid rgb(27, 69, 155);
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: none;
-    height: 40px;
-    position: relative;
-    padding-left: 35px;
-}
-
-.wpcf7-form__submit-row_footer {
-	position: relative;
-}
-
-.wpcf7-form__submit-row_footer:before {
-    content: "";
-    background: url(../css/img/foter-icons.png) no-repeat -103px -47px;
-    width: 18px;
-    height: 17px;
-    position: absolute;
-    left: 120px;
-    top: 12px;
-    z-index: 1;
-}
-
-
-.wpcf7-submit_footer {
-	background-color: rgb(198, 34, 41);
-	box-shadow: none;
-	height: 41px;
-	width: 147px;
-	font: 400 14px "Montserrat";
-	color: rgb(255, 255, 255);
-	text-align: left;
-	position: relative;
-}
-
-.footer__policy-text {
-	flex: 1;
-	font: 400 10px "Montserrat";
-	color: rgb(255, 255, 255);
-	padding-left: 10px;
+	max-width: 300px;
 }
 
 .footer__right-column a {
 	display: block;
 	font: 400 16px "Montserrat";
-	color: rgb(255, 255, 255);
+	color: rgb(33, 33, 33);
 	text-decoration: none;
 }
+	
 
 /*messages*/
 
 .dialogue {
-	border: 2px solid rgb(255, 255, 255);
-	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 3px 7px 0px rgba(244, 244, 244, 0.4);
 }
 
@@ -946,6 +1021,10 @@ footer .small-logo {
 	font: 400 18px "Montserrat";
 	color: rgb(255, 255, 255);
 	padding: 16px;
+}
+
+.dialogue__caption_close:hover {
+	font-weight: 500;
 }
 
 .dialogue__content {
@@ -962,24 +1041,31 @@ footer .small-logo {
 	margin: 0;
 }
 
-.dialogue__persons ul li {
+.dialogue__persons ul li{
     list-style: none;
     margin: 0;
+}
+
+.dialogue__persons ul li a {
+	display: block;
     position: relative;
     padding: 4px 0 4px 10px;
     font: 700 18px "Montserrat";
     color: rgb(22, 22, 22);
-    cursor: default;
 }
 
-.dialogue__persons ul li span {
+.dialogue__persons ul li a:hover {
+	color: #9e9e9e;
+}
+
+.dialogue__persons ul li a span {
 	font-size: 16px;
 	font-weight: 400;
 	color: #63addb;
 	margin-left: 5px;
 }
 
-.dialogue__persons ul li:before {
+.dialogue__persons ul li a:before {
 	content: "";
 	border-radius: 50%;
 	background-color: rgb(82, 172, 98);
@@ -999,6 +1085,10 @@ footer .small-logo {
     box-sizing: border-box;
     border-bottom: 2px solid rgb(247, 247, 247);
     padding: 12px 0 8px;
+}
+
+.person-small .flex {
+	align-items: center;
 }
 
 .person-small__photo {
@@ -1033,17 +1123,8 @@ footer .small-logo {
 	margin-left: 10px;
 }
 
-.person-small__search {
-	background: url(/css/img/message-icons.png) no-repeat -9px -9px;
-	width: 20px;
-	height: 20px;
-	margin: 0 5px 0 10px;
-}
-.person-small__close {
-	background: url(/css/img/message-icons.png) no-repeat -46px -8px;
-	width: 20px;
-	height: 20px;
-	margin: 0 5px;
+.person-small i {
+	margin: 0 0 0 10px;
 }
 
 .person-small__city{
@@ -1060,18 +1141,19 @@ footer .small-logo {
     margin: 15px 0 15px auto;
 }
 
-.message-edit {
-	background: url("/css/img/message-icons.png") no-repeat -9px -47px;
-	width: 16px;
-	height: 15px;
-	margin: 0 2px 0 5px;
+.messsage-columns__icons {
+	display: none;
+	align-items: center;
 }
-.message-delete {
-	background: url("/css/img/message-icons.png") no-repeat -43px -47px;
-	width: 16px;
-	height: 15px;
-	margin: 0 2px;
+
+.messsage-columns__message_my:hover .messsage-columns__icons {
+	display: flex;
 }
+
+.messsage-columns__message i:first-child {
+	margin: 0 5px 0 10px;
+}
+
 
 /*search*/
 
@@ -1086,31 +1168,56 @@ footer .small-logo {
 }
 
 .account-search {
+	height: 40px;
 	align-items: center;
 	justify-content: center;
 	margin-top: -30px;
+	position: relative;
 }
 
-.account-search__button {
-    background: url(../css/img/search.png) no-repeat center;
-	border: none;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 0;
+.account-search i {
+    font-size: 20px;
+	margin: 0 15px;
+}
+
+.account-search__placeholder {
+	padding-left: 15px;
+    font-size: 24px;
+	line-height: 40px;
+    color: rgb(106, 106, 106);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.account-search__placeholder.disabled {
+	display: none;
 }
 
 .account-search__field {
     height: 40px;
-    width: 435px;
     border: none;
     padding-left: 15px;
     font-size: 24px;
-    background: #fcfcfc;
+    background: transparent;
     color: rgb(106, 106, 106);
     text-transform: uppercase;
     text-align: center;
+    position: absolute;
+    width: 100%;
+	height: 100%;
+}
+
+.account-search.active .account-search__field {
+	position: static;
+    width: 435px;
+}
+
+.account-search .fa-times {
+	display: none;
+}
+
+.account-search.active .fa-times {
+	display: block;
 }
 
 .search-tabs {
@@ -1128,15 +1235,24 @@ footer .small-logo {
 	justify-content: center;
 }
 
-.search-tabs__button {
+.search-tabs__label {
+	
+}
+
+.search-tabs__label input {
+	display: none;
+}
+
+.search-tabs__tab {
 	background: #ebebeb;
 	font: 400 12px "Montserrat";
 	color: rgb(106, 106, 106);
 	text-align: center;
 	padding: 5px;
+	cursor: pointer;
 }
 
-.search-tabs__button.active {
+.search-tabs__label input:checked + .search-tabs__tab {
 	background: #52ac62;
 	color: rgb(255, 255, 255);
 }
@@ -1160,6 +1276,20 @@ footer .small-logo {
 	margin: 50px 0;
 }
 
+.search-more {
+	display: block;
+	font-size: 16px;
+	font-family: "Montserrat";
+	color: rgb(106, 106, 106);
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+.initiative-item__buttons_mobile {
+	display: none;
+}
+
 
 
 
@@ -1171,9 +1301,39 @@ footer .small-logo {
 		padding:0 15px;
 	}
 	
+	.login-screen__caption {
+		font-size: 50px;
+	}
+	
+	.footer, .footer_new {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.footer__mobile {
+		width: 100%;
+		align-items: center;
+	}
+	
 }
 
 @media screen and (max-width: 1023px) {
+	.login-screen__caption {
+		font-size: 42px;
+		padding-left: 115px;
+	}
+	
+	.login-screen__small-caption {
+		font-size: 18px;
+	}
+	
+	.login-screen__small-caption_bottom-line {
+		font-size: 26px;
+	}
+	
+	.login-flex-row {
+		margin-top: -65px;
+	}
 	.account-screen__top-content {
 		flex-direction: column;
 		border-bottom: 1px solid rgb(207, 207, 207);
@@ -1206,72 +1366,6 @@ footer .small-logo {
 	
     .account-screen__column {
 		width: 100%;
-	}
-	
-	.footer__top-line {
-		background: #ffffff;
-		color: rgb(33, 33, 33);
-		position: relative;
-	}
-	
-	.footer-links {
-		width: 50%;
-		padding: 20px;
-	}
-	
-	.footer__bottom-line .footer__form, .footer__bottom-line .footer__social {
-		display: none;
-	}
-	
-	.footer__bottom-line, .footer__bottom-line a {
-		background: #ffffff;
-		color: rgb(33, 33, 33);
-		position: relative;
-	}
-	
-	.footer__bottom-line:before {
-		content: "";
-		background-color: rgb(60, 153, 210);
-		width: calc(100% - 30px);
-		height: 2px;
-		position: absolute;
-		left: 15px;
-		top: 15px;
-		top: 0;
-	}
-	
-	.footer__mobile {
-		display: block;
-		background: #3c99d2;
-		padding: 50px 0;
-	}
-	
-	.footer__mobile {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	
-	.footer__mobile__caption {
-	  font: 700 19px "Montserrat";
-	  color: rgb(255, 255, 255);
-		margin: 10px 0;
-	}
-	
-	.wpcf7-submit_footer-mobile {
-		box-shadow: none;
-		background: #315db9;
-		text-align: left;
-		color: rgb(255, 255, 255);
-	}
-	
-	.wpcf7-form__submit-row_footer:before {
-		display: none;
-	}
-	
-	.footer__policy-text_mobile {
-		margin-top: 30px;
-		max-width: 170px;
 	}
 	
 	.group-description {
@@ -1310,11 +1404,27 @@ footer .small-logo {
 	.person_search .button {
 		display: none;
 	}	
+	
+	.footer-links {
+		width: 50%;
+		padding: 20px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-	.login-screen {
-		padding: 48px 0 62px;
+	
+	.login-flex-row__left-column {
+		margin-top: -15px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.form-screen {
+		padding: 15px 25px;
+	}
+	
+	.form-screen__caption {
+		margin-bottom: 10px;
 	}
 	
 	.social-black {
@@ -1343,7 +1453,7 @@ footer .small-logo {
 	
 	.login-screen__small-caption {
 		padding-left: 0px;
-		margin: 10px 0;
+		margin: 0 0 10px;
 		font-size: 18px;
 	}
 	
@@ -1390,20 +1500,12 @@ footer .small-logo {
 		background-position: -144px -6px;
 	}
 	
-	.account-buttons_mobile {
-		flex-direction: column;
+	.person__info {
+		padding: 0 0 0 20px;
 	}
 	
 	.account-buttons_mobile .button {
 		margin-bottom: 10px;
-	}
-	
-	.person {
-		flex-direction: column;
-	}
-	
-	.person__info {
-		padding: 20px 0 0;
 	}
 	
 	.account-screen__caption_members {
@@ -1415,7 +1517,7 @@ footer .small-logo {
 	}
 	
 	.group-page .person__button {
-		margin: 0 0 10px;
+		margin: 0 10px 10px 0;
 	}
 	
 	.messsage-columns__message {
@@ -1426,15 +1528,23 @@ footer .small-logo {
 		width: auto;
 	}
 	
-	.account-search__field {
+	.account-search.active .account-search__field, .account-search__placeholder {
 		height: 40px;
 		width: 300px;
 		font-size: 16px;
 	}
 	
+	.group-page .account-screen__top-content {
+		padding-bottom: 20px;
+	}
+	
 	.account-search__button {
 		width: 40px;
 		height: 40px;
+	}
+	
+	.account-nav {
+		margin-bottom: 25px;
 	}
 
 }
@@ -1452,6 +1562,21 @@ footer .small-logo {
 }
 
 @media screen and (max-width: 639px) {
+	.login-screen__caption {
+		font-size: 22px;
+		font-weight: 700;
+	}
+	.login-screen__small-caption {
+		font-size: 15px;
+	}
+	.login-screen__small-caption_bottom-line {
+		font-size: 18px;
+	}
+	
+	.wpcf7-form-control-wrap {
+		margin: 10px 0;
+	}
+	
 	.footer__bottom-line .wrapper {
 		flex-direction: column;
 		text-align: center;
@@ -1459,6 +1584,40 @@ footer .small-logo {
 	
 	.footer__left-column {
 		margin-bottom: 20px;
+	}
+	
+	.initiative-item__buttons {
+		display: none;
+	}
+	
+	.initiative-item_small .initiative-item__buttons {
+		display: flex;
+	}
+	
+	.initiative-item__buttons.initiative-item__buttons_mobile {
+		display: flex;
+		margin-top: 5px;
+	}
+	
+	.initiative-item__button {
+		width: 120px;
+		margin-right: 5px;
+	}
+	
+	.account-search.active .account-search__field, .account-search__placeholder {
+		height: 30px;
+		width: 250px;
+		font-size: 12px;
+		padding: 0;
+	}
+	
+	.account-search i {
+		font-size: 16px;
+		margin: 0 5px;
+	}
+	
+	.footer-links {
+		width: 100%;
 	}
 	
 }

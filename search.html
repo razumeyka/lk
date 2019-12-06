@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"/>
     <script src="https://myfri.org/wp-content/themes/my_fri/js/main.js?ver=5.1.1"></script>
+    <script src="https://use.fontawesome.com/bf19d1974e.js"></script>
     <title></title>
 </head>
 <body class="account-page group-page">
@@ -35,11 +36,16 @@
 	<div class="search-line">
 		<div class="wrapper">
 			<div class="account-nav">
-				<a href="/my-account.html" class="account-nav__link">Профиль</a>
+				<a href="/my-account.html" class="account-nav__link flex">
+					<i class="fas fa-arrow-left"></i>
+					<div>Профиль</div>
+				</a>
 			</div>	
 			<form action="/" class="account-search flex"> 
-				<input type="submit" class="account-search__button" value="">
-				<input type="search" class="account-search__field" placeholder="Найти участника или группу" value="" name=""> 
+				<i class="fas fa-search"></i>
+				<div class="account-search__placeholder">Найти участника или группу</div>
+				<input type="text" class="account-search__field" placeholder="" value="" name=""> 
+				<i class="fas fa-times"></i>
 			</form>
 		</div>
 	</div>
@@ -47,14 +53,26 @@
 		<div class="search-tabs">
 			<div class="search-tabs__caption">Включить в поиск</div>
 			<div class="search-tabs__inner flex">
-				<a href="/search.html" class="search-tabs__button">Пользователи</a>
-				<a href="/group-search.html" class="search-tabs__button active">Группы</a>
-				<a href="" class="search-tabs__button">Города</a>
-				<a href="" class="search-tabs__button">Описание</a>
+				<label class="search-tabs__label">
+					<input type="checkbox" checked/>
+					<span class="search-tabs__tab">Пользователи</span>
+				</label>
+				<label class="search-tabs__label">
+					<input type="checkbox"/>
+					<span class="search-tabs__tab">Группы</span>
+				</label>
+				<label class="search-tabs__label">
+					<input type="checkbox"/>
+					<span class="search-tabs__tab">Города</span>
+				</label>
+				<label class="search-tabs__label">
+					<input type="checkbox"/>
+					<span class="search-tabs__tab">Описание</span>
+				</label>
 			</div>
 		</div>	
 		<div class="person-wr">
-			<div class="person person_search flex">
+			<div class="person person_search person_online flex">
 				<div class="person__photo"></div>
 				<div class="person__info">
 					<div class="flex">
@@ -134,7 +152,7 @@
 			</div>
 		</div>
 		<div class="person-wr">
-			<div class="person person_search flex">
+			<div class="person person_search person_online flex">
 				<div class="person__photo"></div>
 				<div class="person__info">
 					<div class="flex">
@@ -174,11 +192,10 @@
 				<a href="#" class="person__button_mobile button button_big button_grey">Предложить инициативу</a>
 			</div>
 		</div>
-		
+		<a href="#" class="search-more">Смотреть еще...</a>
 	</div>
-    <footer class="footer">
+    <footer class="footer footer_new flex">
     	<div class="footer__mobile">
-    		<div class="wrapper">
     			<div class="footer__social flex">
 					<a href="/" class="small-logo"></a>
 					<div class="social-footer flex">
@@ -200,97 +217,11 @@
 							<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Ваш e-Mail">
 						</span>
 						<div class="wpcf7-form__submit-row_footer">
-						   <input type="submit" value="Подписаться" class="wpcf7-form-control wpcf7-submit wpcf7-submit_footer-mobile send-button-initiative">
-						   <span class="ajax-loader"></span>
-						   <p></p>
-						   <div class="footer__policy-text footer__policy-text_mobile"> Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
-						</div>
-						<div class="wpcf7-response-output wpcf7-display-none"></div>
-					 </form>
-				  </div>
-				</div>
-    		</div>
-    	</div>
-    	<div class="footer__top-line">
-			<div class="wrapper">
-		   		<div class="footer__links-list flex">
-				   <div class="footer-links">
-						<h2 class="footer-links__caption">Организация</h2>
-						<ul>
-							<li>
-							   <a href="https://myfri.org/dokumentyi">Документы</a>
-							</li>
-						</ul>
-					</div>
-					<div class="footer-links">
-						<h2 class="footer-links__caption">Инициативы</h2>
-						<ul>
-							<li><a href="https://myfri.org/project/ty-iz-rossii/russkiy/">Русский</a></li>
-							<li><a href="https://myfri.org/project/ty-iz-rossii/novaya-diaspora/">Новая диаспора</a></li>
-							<li><a href="https://myfri.org/project/ty-iz-rossii/biznes-initsiativyi/">Бизнес-инициативы</a></li>
-							<li><a href="https://myfri.org/project/ty-iz-rossii/zashhita/">Защита</a></li>
-							<li><a href="https://myfri.org/project/rossiya-miru/rossiya-vpervyie-v-mire/">Россия впервые в мире</a></li>
-							<li><a href="https://myfri.org/project/krug-zhizni/genialnyie-deti-test/">Гениальные дети</a></li>
-							<li><a href="https://myfri.org/project/krug-zhizni/schastlivaya-zhizn-v-preklonnom-vozraste/">Счастливая жизнь в преклонном возрасте</a></li>
-							<li><a href="https://myfri.org/project/krug-zhizni/istoriya-rossii-do-shkolyi/">История России до школы</a></li>
-						</ul>
-					</div>
-					<div class="footer-links">
-						<h2 class="footer-links__caption">Новости и СМИ</h2>
-						<ul>
-							<li><a href="https://myfri.org/category/important_events/">Важные события</a></li>
-							<li><a href="https://myfri.org/important-video/">Важное видео</a></li>
-							<li><a href="https://myfri.org/category/novosti-fri-iz-rossii/">Новости FRI из России</a></li>
-							<li><a href="https://myfri.org/un-in-photos/">Организация в фотографиях</a></li>
-							<li><a href="https://myfri.org/press-centr/">Последние новости</a></li>
-							<li><a href="https://myfri.org/category/posolstva/">Посольства</a></li>
-							<li><a href="https://myfri.org/category/rossotrudnichestvo/">Россотрудничество</a></li>
-						 </ul>
-					</div>
-					<div class="footer-links">
-						<h2 class="footer-links__caption">Проекты</h2>
-						<ul>
-							<li>
-							   <a href="https://myfri.org/project/ty-iz-rossii/">Ты из России</a>
-							</li>
-							<li>
-							   <a href="https://myfri.org/project/rossiya-miru/">Россия миру</a>
-							</li>
-							<li>
-							   <a href="https://myfri.org/project/krug-zhizni/">Россия сегодня</a>
-							</li>
-							<li>
-							   <a href="https://myfri.org/project/premia/">Премия Инициатива из России</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-		   </div>
-	    </div>
-	    <div class="footer__bottom-line">
-			<div class="wrapper flex">
-				<div class="footer__left-column">
-					<div class="footer__social flex">
-						<a href="/" class="small-logo"></a>
-						<div class="social-footer flex">
-							<a href="#" class="social-footer__icon social-footer__icon_fb"></a>
-							<a href="#" class="social-footer__icon social-footer__icon_youtube"></a>
-							<a href="#"  class="social-footer__icon social-footer__icon_insta"></a>
-							<a href="#"  class="social-footer__icon social-footer__icon_vk"></a>
-						</div>
-					</div>
-					<h2 class="footer__left-caption"> ОБЩЕСТВЕННОЕ ДВИЖЕНИЕ «РУССКАЯ ИНИЦИАТИВА»</h2>
-					<div class="footer__copyright"> © 2019 Все права защищены При цитировании информации гиперссылка на портал «РУССКАЯ ИНИЦИАТИВА» обязательна.</div>
-				</div>
-				<div class="footer__form">
-					<div role="form" class="wpcf7" id="wpcf7-f11748-o2" lang="ru-RU" dir="ltr">
-					<div class="screen-reader-response"></div>
-					<form action="/rukovoditel/#wpcf7-f11748-o2" method="post" class="wpcf7-form" novalidate="novalidate">
-						<span class="wpcf7-form-control-wrap wpcf7-form-control-wrap_footer">
-							<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Ваш e-Mail">
-						</span>
-						<div class="wpcf7-form__submit-row_footer flex">
-						   <input type="submit" value="Подписаться" class="wpcf7-form-control wpcf7-submit wpcf7-submit_footer send-button-initiative">
+					   		<button class=" wpcf7-submit wpcf7-submit_footer send-button-initiative">
+					   			<div>Вступить в инициативу</div>
+					   			<i class="far fa-paper-plane"></i>
+					   		</button>
+						   
 						   <span class="ajax-loader"></span>
 						   <p></p>
 						   <div class="footer__policy-text"> Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
@@ -298,6 +229,106 @@
 						<div class="wpcf7-response-output wpcf7-display-none"></div>
 					 </form>
 				  </div>
+    		</div>
+    	</div>
+    	<div class="footer__right-column">
+			<div class="footer__top-line">
+				<div class="wrapper">
+					<div class="footer__links-list flex">
+					   <div class="footer-links">
+							<h2 class="footer-links__caption">Организация</h2>
+							<ul>
+								<li>
+								   <a href="#"> История</a>
+								</li>
+								<li>
+								   <a href="#">Гимн</a>
+								</li>
+								<li>
+								   <a href="#"> Документы</a>
+								</li>
+								<li>
+								   <a href="#">Архив</a>
+								</li>
+								<li>
+								   <a href="#">Библиотека</a>
+								</li>
+								<li>
+								   <a href="#">Членство</a>
+								</li>
+								<li>
+								   <a href="#">Сторонники</a>
+								</li>
+								<li>
+								   <a href="#">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-links">
+							<h2 class="footer-links__caption">Темы и смыслы</h2>
+							<ul>
+								<li><a href="#">Инициативы в работе</a></li>
+								<li><a href="#">Отбор инициатив</a></li>
+								<li><a href="#">Рабочие группы</a></li>
+								<li><a href="#">Экспертный совет</a></li>	
+							</ul>
+						</div>
+						<div class="footer-links">
+							<h2 class="footer-links__caption">Новости и СМИ</h2>
+							<ul>
+								<li><a href="#">Важное</a></li>
+								<li><a href="#">Актуальные новоси</a></li>
+								<li><a href="#">Мы помогаем</a></li>
+								<li><a href="#">Особое мнение</a></li>
+								<li><a href="#">Организация в фото</a></li>
+								<li><a href="#">Организации в видео</a></li>	
+							 </ul>
+						</div>
+						<div class="footer-links">
+							<h2 class="footer-links__caption">Проекты</h2>
+							<ul>
+								<li>
+								   <a href="#">Премия «Русская Инициатива»</a>
+								</li>
+								<li>
+								   <a href="#">Информационное агентство </a>
+								</li>
+								<li>
+								   <a href="#">«Русская Инициатива» </a>
+								</li>
+								<li>
+								   <a href="#">Общественно- просветительский YouTube канал «Русская Инициатива»</a>
+								</li>
+								<li>
+								   <a href="#">Открытая студия «Гласная площадь»</a>
+								</li>
+								<li>
+								   <a href="#">Культурный центр «Русская Инициатива» </a>
+								</li>
+								<li>
+								   <a href="#">Издательство «Русская Инициатива»</a>
+								</li>
+								<li>
+								   <a href="#"> Солоухинские чтения «Камешки на ладони»</a>
+								</li>
+								<li>
+								   <a href="#">Ситуационный центр «Русская инициатива» </a>
+								</li>
+								<li>
+								   <a href="#">Ледовая постановка «Подвиг» </a>
+								</li>
+								<li>
+								   <a href="#">Фестиваль классической музыки «Ноябрьские встречи»  </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+			   </div>
+			</div>
+	    <div class="footer__bottom-line">
+			<div class="wrapper flex">
+				<div class="footer__left-column">
+					<div class="footer__copyright"> © 2019 Все права защищены При цитировании информации гиперссылка на портал «РУССКАЯ ИНИЦИАТИВА» обязательна.</div>
 				</div>
 				<div class="footer__right-column">
 					<a href="#">Политика Конфиденциальности</a>
@@ -306,6 +337,7 @@
 					<a href="mailto:contact@gmail.com">contact@gmail.com</a>
 				</div>
 			</div>
+   		</div>
    		</div>
 	</footer>
 </body>

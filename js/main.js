@@ -1,13 +1,15 @@
-$(document).ready(function(){    
-    $('.learn').click(function(event) { 
-        event.preventDefault();
-        $(".form_screen .wpcf7-form").addClass('active');
-    });
-    
-    $('.back').click(function(event) { 
-        event.preventDefault();
-        $(".form_screen .wpcf7-form").removeClass('active');
-    }); 
+$(document).ready(function(){   
+	
+// main-screen height
+	
+	function setHeiHeight() {
+		$('.login-screen').css({
+			height: $(window).height() - 52 + 'px'
+		});
+	}
+	setHeiHeight(); 
+	
+	
 	
 // accordion
 	
@@ -19,8 +21,22 @@ $(document).ready(function(){
     });
 	
 	$(document).on('click','.accordion__close',function(){
-        $(this).parent().slideUp(500);
-		$(this).parent().parent().find('.accordion__question').toggleClass('active');
+        $(this).parent().parent().slideUp(500);
+		$(this).parent().parent().parent().find('.accordion__question').toggleClass('active');
     });
+	
+//search
+		
+	$('.account-search__field').focusin(function(){
+		$('.account-search__placeholder').addClass('disabled');
+		$(this).closest('.account-search').addClass('active');
+	}); 
+	
+	$(document).on('click','.account-search .fa-times',function(e){
+        $('.account-search__placeholder').removeClass('disabled');
+		$(this).closest('.account-search').removeClass('active');
+		$(this).closest('.account-search')[0].reset();
+    });
+	
 		 
 });
