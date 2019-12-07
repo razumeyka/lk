@@ -24,10 +24,26 @@ $(document).ready(function(){
 		$(this).toggleClass('active');
     });
 	
-	$(document).on('click','.accordion__close',function(){
+	$(document).on('click','.accordion__close_common',function(){
+        $(this).parent().slideUp(500);
+		$(this).parent().parent().find('.accordion__question').toggleClass('active');
+    });
+	
+	$(document).on('click','.accordion__close_my',function(){
         $(this).parent().parent().slideUp(500);
 		$(this).parent().parent().parent().find('.accordion__question').toggleClass('active');
     });
+	
+		
+//tabs
+	
+	$(document).on('click','.accordion .search-tabs__label',function(){
+		$(this).parent().find('.search-tabs__label').removeClass('active');
+        $(this).toggleClass('active');
+    });
+	
+	
+	
 	
 //search
 		
