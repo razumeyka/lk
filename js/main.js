@@ -20,7 +20,7 @@ $(document).ready(function(){
 	$('.accordion__answer').hide();
 	
     $(document).on('click','.accordion__question',function(e){
-        $(this).next().slideDown(500);
+        $(this).next().slideDown(300);
 		$(this).toggleClass('active');
     });
 	
@@ -41,8 +41,6 @@ $(document).ready(function(){
 		$(this).parent().find('.search-tabs__label').removeClass('active');
         $(this).toggleClass('active');
     });
-	
-	
 	
 	
 //search

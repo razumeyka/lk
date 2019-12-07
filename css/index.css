@@ -265,6 +265,10 @@ i:hover {
     margin: 0 0 10px 14px;
 }
 
+.login-flex-row__sign-button:hover {
+    color: rgb(255, 255, 255, 0.8);
+}
+
 .login-flex-row__right-column {
     align-items: center;
     padding: 0 0 74px 12px;
@@ -568,6 +572,7 @@ i:hover {
 .accordion__answer {
 	justify-content: space-between;
     padding: 21px 0 65px 0px;
+	transition: none;
 }
 
 .accordion__close {
@@ -732,6 +737,9 @@ input.person-details__second-column:focus {
     color: rgb(118, 118, 118);
 	cursor: pointer;
 }
+.initiative-item__cancel:hover {
+	color: rgb(49, 93, 185);
+}
 
 .account-screen__all-initiative {
 	display: inline-block;
@@ -741,10 +749,13 @@ input.person-details__second-column:focus {
 	text-decoration: none;
 	margin: 25px auto;
 	position: relative;
+	transition: all 0.5s;
 }
 
-.account-screen__all-initiative:hover {
-    color: rgb(183, 183, 183);
+.account-screen__all-initiative:hover:before {
+	transition: all 0.5s;
+	width: 105%;
+    background-color: rgb(60, 153, 210, 0.7);
 }
 
 .account-screen__all-initiative:before {
@@ -969,6 +980,11 @@ footer .small-logo {
 .wpcf7-submit_footer i {
 	margin-left: 10px;
 }
+.wpcf7-submit_footer:hover {
+	cursor: pointer;
+
+	background-color: rgb(38, 70, 138);
+}
 
 .footer__policy-text {
 	font: 400 10px "Montserrat";
@@ -1011,6 +1027,10 @@ footer .small-logo {
 	color: rgb(91, 91, 91);
 	padding-left: 10px;
 	position: relative;
+}
+
+.footer-links ul li a:hover {
+	color: #3c99d2;
 }
 
 .footer-links ul li a:before {
@@ -1071,7 +1091,10 @@ footer .small-logo {
 	color: rgb(33, 33, 33);
 	text-decoration: none;
 }
-	
+
+.footer__right-column a:hover { 
+	color: #3c99d2;
+ }
 
 /*messages*/
 
@@ -1337,7 +1360,7 @@ footer .small-logo {
 	cursor: pointer;
 }
 
-search-page .search-tabs__label input:checked + .search-tabs__tab {
+.search-page .search-tabs__label input:checked + .search-tabs__tab {
 	background: #52ac62;
 	color: rgb(255, 255, 255);
 }
